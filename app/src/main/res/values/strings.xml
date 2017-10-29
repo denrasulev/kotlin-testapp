@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="main_text">Hello, World!</string>
+    <string name="button1_text">Button1</string>
+    <string name="button2_text">Button2</string>
+    <string name="button3_text">Button3</string>
+    <string name="second_screen_text">Here is a random number from 0 to %1d</string>
+    <string name="text_view_1">0</string>
+    <string name="text_view_2">0</string>
+    <string name="text_view_3">0</string>
+    <string name="random_number">0</string>
+</resources>
