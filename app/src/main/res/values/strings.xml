@@ -9,4 +9,5 @@
     <string name="text_view_2">0</string>
     <string name="text_view_3">0</string>
     <string name="random_number">0</string>
+    <string name="toast_string">Button1 pressed.</string>
 </resources>
