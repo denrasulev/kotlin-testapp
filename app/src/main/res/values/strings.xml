@@ -10,4 +10,9 @@
     <string name="text_view_3">0</string>
     <string name="random_number">0</string>
     <string name="toast_string">Button1 pressed.</string>
+    <string name="btnOk">Ok</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="tvOut">Press Ok or Cancel</string>
+    <string name="msgOk">"Pressed button Ok"</string>
+    <string name="msgCn">"Pressed button Cancel"</string>
 </resources>

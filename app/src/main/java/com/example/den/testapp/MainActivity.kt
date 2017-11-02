@@ -3,6 +3,7 @@ package com.example.den.testapp
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+    val TAG = "myLog"
 
     fun toastMe(view: View) {
 
@@ -43,6 +46,15 @@ class MainActivity : AppCompatActivity() {
 
         // Start the new activity.
         startActivity(randomIntent)
+    }
+
+    fun textOnClick(v: View) {
+        // по id определяем кнопку, вызвавшую этот обработчик
+        Log.d(TAG, "Execute routine depending on pressed button")
+        when (v.id) {
+            R.id.buttonOk -> tvOut.text = "Нажата Ок"
+            R.id.buttonCancel -> tvOut.text = "Нажата Cancel"
+        }
     }
 
 }
