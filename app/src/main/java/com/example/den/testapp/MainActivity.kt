@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,45 +17,46 @@ class MainActivity : AppCompatActivity() {
 
     private val myTAG = "myLog"
 
-    fun toastMe(view: View) {
+    fun showToast(view: View) {
 
         // show short toast with text from 'toast_string'
-        Toast.makeText(this, R.string.toast_string, Toast.LENGTH_SHORT).show()
+        toast(R.string.toast_string)
     }
 
     fun countMe(view: View) {
 
-        // Get the value of the text view, convert it to Int and increment
+        // get the value of the text view, convert it to Int and increment
         var count = textView2.text.toString().toInt()
         count++
 
-        // Display the new value in the text view.
+        // display the new value in the text view.
         textView2.text = count.toString()
     }
 
     fun randomMe(view: View) {
 
-        // Create an Intent to start the second activity
+        // create an Intent to start the second activity
         val randomIntent = Intent(this, Main2Activity::class.java)
 
-        // Get the current value of the text view.
+        // get the current value of the text view.
         val count = textView2.text.toString().toInt()
 
-        // Add the count to the extras for the Intent.
+        // add the count to the extras for the Intent.
         randomIntent.putExtra(Main2Activity.TOTAL_COUNT, count)
 
-        // Start the new activity.
+        // start the new activity.
         startActivity(randomIntent)
     }
 
     fun textOnClick(v: View) {
-        // по id определяем кнопку, вызвавшую этот обработчик
+        // put log event so we can trace it later
         Log.d(myTAG, "Execute routine depending on pressed button")
+
+        // execute routine depending on the id of a pressed button
         when (v.id) {
             R.id.buttonOk -> tvOut.text = getText(R.string.msgOk)
             R.id.buttonCancel -> tvOut.text = getText(R.string.msgCn)
         }
     }
-
 }
 
