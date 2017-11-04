@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    val TAG = "myLog"
+    private val myTAG = "myLog"
 
     fun toastMe(view: View) {
 
@@ -50,10 +50,10 @@ class MainActivity : AppCompatActivity() {
 
     fun textOnClick(v: View) {
         // по id определяем кнопку, вызвавшую этот обработчик
-        Log.d(TAG, "Execute routine depending on pressed button")
+        Log.d(myTAG, "Execute routine depending on pressed button")
         when (v.id) {
-            R.id.buttonOk -> tvOut.text = "Нажата Ок"
-            R.id.buttonCancel -> tvOut.text = "Нажата Cancel"
+            R.id.buttonOk -> tvOut.text = getText(R.string.msgOk)
+            R.id.buttonCancel -> tvOut.text = getText(R.string.msgCn)
         }
     }
 

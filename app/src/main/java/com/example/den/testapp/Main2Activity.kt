@@ -2,14 +2,14 @@ package com.example.den.testapp
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main2.*
+import kotlinx.android.synthetic.main.activity_two.*
 import java.util.*
 
 class Main2Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_two)
         showRandomNumber()
     }
 
@@ -24,6 +24,7 @@ class Main2Activity : AppCompatActivity() {
         // Generate the random number
         val random = Random()
         var randomInt = 0
+
         // Add one because the bound is exclusive
         if (count > 0) {
             // Add one because the bound is exclusive
@@ -34,7 +35,7 @@ class Main2Activity : AppCompatActivity() {
         textView_random.text = randomInt.toString()
 
         // Substitute the max value into the string resource for the heading, and update the heading
-        textView_second.text = getString(R.string.second_screen_text, count)
+        textView_second.text = getString(R.string.screen2_text, count)
     }
 
 }
