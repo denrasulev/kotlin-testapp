@@ -4,11 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
-class MainActivity : AppCompatActivity() {
+
+class Main : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +39,13 @@ class MainActivity : AppCompatActivity() {
     fun randomMe(view: View) {
 
         // create an Intent to start the second activity
-        val randomIntent = Intent(this, Main2Activity::class.java)
+        val randomIntent = Intent(this, Two::class.java)
 
         // get the current value of the text view.
         val count = textView2.text.toString().toInt()
 
         // add the count to the extras for the Intent.
-        randomIntent.putExtra(Main2Activity.TOTAL_COUNT, count)
+        randomIntent.putExtra(Two.TOTAL_COUNT, count)
 
         // start the new activity.
         startActivity(randomIntent)
@@ -58,5 +61,21 @@ class MainActivity : AppCompatActivity() {
             R.id.buttonCancel -> tvOut.text = getText(R.string.msgCn)
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+
+        menu.add("menu1")
+        menu.add("menu2")
+        menu.add("menu3")
+        menu.add("menu4")
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        toast(item.title)
+        return super.onOptionsItemSelected(item)
+    }
+
 }
 
