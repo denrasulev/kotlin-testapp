@@ -11,6 +11,11 @@
     <string name="btnOk">OK</string>
     <string name="btnCancel">Cancel</string>
     <string name="tvOut">Press OK or Cancel</string>
-    <string name="msgOk">"Pressed button:\n <b>OK</b>"</string>
-    <string name="msgCn">"Pressed button:\n <b>Cancel</b>"</string>
+    <string name="msgOk">"Pressed button <b>OK</b>"</string>
+    <string name="msgCn">"Pressed button <b>Cancel</b>"</string>
+
+    <string name="menu1">Menu 1</string>
+    <string name="menu2">Menu 2</string>
+    <string name="menu3">Menu 3</string>
+    <string name="menu4">Menu 4</string>
 </resources>

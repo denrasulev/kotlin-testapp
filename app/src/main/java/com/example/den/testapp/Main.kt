@@ -10,7 +10,6 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
-
 class Main : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,12 +62,7 @@ class Main : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-
-        menu.add("menu1")
-        menu.add("menu2")
-        menu.add("menu3")
-        menu.add("menu4")
-
+        menuInflater.inflate(R.menu.main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
